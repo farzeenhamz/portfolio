@@ -2335,8 +2335,10 @@ html:not(.js) .veil {
     overflow-x: auto;
     scrollbar-width: none;
     /* the strip scrolls sideways here, so fade the cut edge instead of slicing a word */
-    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
-    mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+    padding-right: 10px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
   }
 
   .site-nav::-webkit-scrollbar {
