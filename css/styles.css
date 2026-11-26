@@ -1884,8 +1884,8 @@ td:first-child {
   }
 
   .site-nav a {
-    font-size: 0.8rem;
-    padding: 0 6px;
+    font-size: 0.78rem;
+    padding: 0 5px;
     white-space: nowrap;
   }
 
@@ -2334,6 +2334,9 @@ html:not(.js) .veil {
     gap: 2px;
     overflow-x: auto;
     scrollbar-width: none;
+    /* the strip scrolls sideways here, so fade the cut edge instead of slicing a word */
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
   }
 
   .site-nav::-webkit-scrollbar {
