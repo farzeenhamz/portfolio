@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills first hiring with feedback | Farzeen Hamza</title>
+  <meta name="description" content="A draft PRD for a hiring feedback product: structured rejection reasons, a drafted note approved by a human, and feedback a candidate can learn from.">
+  <meta name="theme-color" content="#05060A">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305060A'/%3E%3Cpath d='M14 14h16c0 6 6 6 6 12s-6 6-6 12H14z' fill='none' stroke='%235CE1E6' stroke-width='3'/%3E%3Ccircle cx='44' cy='44' r='6' fill='%233DDC97'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="case-page prd-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="flyer-1" d="M 0 0 L 40.3 0 C 33.73 -0.53 23.88 -6.88 39.65 -11.91 C 52.13 -15.09 61.32 -15.09 73.81 -11.91 C 89.57 -6.88 79.72 -0.53 73.15 0 L 100 0 L 100 36.9 C 99.5 29.03 93.52 17.22 88.79 36.11 C 85.8 51.06 85.8 62.08 88.79 77.03 C 93.52 95.92 99.5 84.11 100 76.24 L 100 100 L 0 100 L 0 77.21 C 0.5 84.74 6.49 96.03 11.23 77.96 C 14.23 63.66 14.23 53.12 11.23 38.82 C 6.49 20.75 0.5 32.04 0 39.57 L 0 0 Z"/>
+      <path id="flyer-2" d="M 0 0 L 29.91 0 C 23.34 0.43 13.48 5.55 29.26 9.61 C 41.75 12.17 50.95 12.17 63.44 9.61 C 79.22 5.55 69.36 0.43 62.78 0 L 100 0 L 100 31.08 C 100.56 22.77 107.29 10.29 112.61 30.25 C 115.97 46.04 115.97 57.68 112.61 73.48 C 107.29 93.43 100.56 80.96 100 72.65 L 100 100 L 68.36 100 C 76.26 99.39 88.11 92.1 69.15 86.32 C 54.14 82.68 43.07 82.68 28.06 86.32 C 9.1 92.1 20.95 99.39 28.85 100 L 0 100 L 0 0 Z"/>
+      <path id="flyer-3" d="M 0 0 L 100 0 L 100 26.17 C 99.45 19.59 92.9 9.72 87.71 25.51 C 84.44 38.02 84.44 47.23 87.71 59.73 C 92.9 75.53 99.45 65.65 100 59.07 L 100 100 L 60.26 100 C 66.8 100.5 76.6 106.47 60.92 111.2 C 48.5 114.19 39.35 114.19 26.93 111.2 C 11.25 106.47 21.05 100.5 27.59 100 L 0 100 L 0 76.36 C -0.5 84.3 -6.47 96.22 -11.2 77.16 C -14.19 62.07 -14.19 50.95 -11.2 35.86 C -6.47 16.8 -0.5 28.71 0 36.65 L 0 0 Z"/>
+    </defs>
+  </svg>
+
+  <div class="world" aria-hidden="true">
+    <div class="world__theme is-on" data-theme="explore"></div>
+    <div class="world__stars" data-depth="1"></div>
+    <div class="world__stars" data-depth="2"></div>
+    <div class="world__stars" data-depth="3"></div>
+    <div class="world__grain"></div>
+    <div class="world__vignette"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#flyer-1" fill="none" stroke="#5CE1E6" stroke-width="6"/></svg>
+      Farzeen Hamza
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html#opening">Journey</a>
+      <a href="index.html#explore">Explorations</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="prd-hero" aria-labelledby="case-title">
+      <div class="prd-hero__inner">
+        <div class="prd-hero__copy">
+          <a class="back-link" href="index.html#explore">Back to the journey</a>
+          <p class="eyebrow"><svg class="eyebrow-piece" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#flyer-2"/></svg>Exploration two</p>
+          <h1 id="case-title">Skills first hiring with feedback</h1>
+          <p class="prd-sub">Recruitment transparency, PRD v0.1</p>
+          <ul class="badge-row">
+            <li class="badge">PRD v0.1 draft</li>
+            <li class="badge">Independent self initiated exploration</li>
+            <li class="badge">Concept and research, not a launched product</li>
+          </ul>
+          <div class="revision">
+            <h2 class="revision__title">Revision history</h2>
+            <ol class="revision__list">
+              <li><span class="revision__id">v0.1</span><span class="revision__date">Nov 2026</span><span class="revision__note">First draft from my research brief</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="prd-hero__art">
+          <div class="case-hero__scene" aria-hidden="true">
+          <svg viewBox="0 0 400 250" role="presentation" focusable="false">
+                  <defs>
+                    <linearGradient id="hBg" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#070f1b"/><stop offset="1" stop-color="#0a1a2a"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="250" fill="url(#hBg)"/>
+                  <g opacity=".7">
+                    <circle cx="40" cy="26" r="1.1" fill="#EAF2FF"/><circle cx="180" cy="16" r="1" fill="#EAF2FF"/>
+                    <circle cx="300" cy="30" r="1.1" fill="#EAF2FF"/>
+                  </g>
+                  <g transform="translate(296 58)">
+                    <rect class="hire-building" x="0" y="0" width="86" height="156" rx="9"/>
+                    <rect class="hire-window" x="12" y="16" width="16" height="12" rx="2" opacity=".8"/>
+                    <rect class="hire-window" x="36" y="16" width="16" height="12" rx="2" opacity=".55"/>
+                    <rect class="hire-window" x="60" y="16" width="14" height="12" rx="2" opacity=".7"/>
+                    <rect class="hire-window" x="12" y="40" width="16" height="12" rx="2" opacity=".5"/>
+                    <rect class="hire-window" x="36" y="40" width="16" height="12" rx="2" opacity=".75"/>
+                    <rect class="hire-window" x="60" y="40" width="14" height="12" rx="2" opacity=".6"/>
+                    <rect x="26" y="122" width="36" height="34" rx="4" fill="rgba(92,225,230,.16)" stroke="rgba(92,225,230,.5)"/>
+                    <g class="anim-shortlist">
+                      <rect x="10" y="66" width="66" height="9" rx="4.5" fill="rgba(61,220,151,.85)"/>
+                      <rect x="10" y="80" width="52" height="9" rx="4.5" fill="rgba(61,220,151,.6)"/>
+                      <rect x="10" y="94" width="58" height="9" rx="4.5" fill="rgba(61,220,151,.4)"/>
+                    </g>
+                  </g>
+                  <g transform="translate(44 128)">
+                    <g class="anim-hire-smile">
+                      <circle cx="0" cy="0" r="9.5" fill="#EAF2FF"/>
+                      <path d="M-3.8 -1.4 q3.8 4.4 7.6 0" fill="none" stroke="#0A1020" stroke-width="1.6" stroke-linecap="round"/>
+                      <circle cx="-3.4" cy="-3.6" r="1" fill="#0A1020" opacity=".65"/>
+                      <circle cx="3.4" cy="-3.6" r="1" fill="#0A1020" opacity=".65"/>
+                    </g>
+                    <path d="M-11 14 q-1 -12 11 -12 q12 0 11 12 v30 q0 5 -5 5 h-12 q-5 0 -5 -5 z" fill="#EAF2FF"/>
+                    <path d="M-5 47 v20 M5 47 v20" stroke="#EAF2FF" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M-11 22 q-7 4 -7 11" fill="none" stroke="#EAF2FF" stroke-width="4" stroke-linecap="round"/>
+                  </g>
+                  <g transform="translate(122 156)">
+                    <rect class="hire-card" x="0" y="0" width="62" height="76" rx="9"/>
+                    <g class="anim-stack-1"><path class="hire-piece" d="M9 11 h28 a5 5 0 0 1 0 10 h-4 a4 4 0 0 0 0 8 h4 v8 h-28 z"/></g>
+                    <g class="anim-stack-2"><path class="hire-piece" d="M9 45 h28 a5 5 0 0 1 0 10 h-4 a4 4 0 0 0 0 8 h4 v8 h-28 z" opacity=".8"/></g>
+                    <g class="anim-stack-3"><path class="hire-piece" d="M9 79 h28 a5 5 0 0 1 0 10 h-4 a4 4 0 0 0 0 8 h4 v8 h-28 z" opacity=".6"/></g>
+                  </g>
+                  <g class="anim-card-travel" transform="translate(122 156)">
+                    <rect x="0" y="0" width="62" height="76" rx="9" fill="rgba(92,225,230,.1)" stroke="rgba(92,225,230,.75)" stroke-width="1.3"/>
+                    <rect x="9" y="13" width="32" height="5" rx="2.5" fill="rgba(234,242,255,.8)"/>
+                    <rect x="9" y="25" width="42" height="4" rx="2" fill="rgba(234,242,255,.45)"/>
+                    <rect x="9" y="35" width="36" height="4" rx="2" fill="rgba(234,242,255,.35)"/>
+                    <path d="M9 52 l8 8 l16 -16" fill="none" stroke="#3DDC97" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <g class="anim-loop">
+                    <path class="hire-arrow" d="M300 190 q-70 30 -172 4"/>
+                    <path d="M136 190 l-9 4 l8 5" fill="none" stroke="rgba(92,225,230,.75)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="hire-arrow" d="M150 208 q70 22 150 -6"/>
+                    <path d="M292 198 l9 3 l-7 6" fill="none" stroke="rgba(92,225,230,.75)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <g class="anim-note" transform="translate(148 172)">
+                    <rect class="hire-note" x="0" y="0" width="58" height="24" rx="6"/>
+                    <rect x="7" y="7" width="34" height="3" rx="1.5" fill="rgba(255,181,71,.8)"/>
+                    <rect x="7" y="14" width="24" height="3" rx="1.5" fill="rgba(255,181,71,.55)"/>
+                  </g>
+                  <g class="anim-chip-reason" transform="translate(292 118)">
+                    <rect class="hire-chip" x="0" y="0" width="56" height="20" rx="10"/>
+                    <text x="28" y="13.5" text-anchor="middle" fill="#5CE1E6" font-family="JetBrains Mono, monospace" font-size="7.5" letter-spacing="1">REASON</text>
+                  </g>
+                </svg>
+                  </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="prd-shell">
+      <nav class="prd-rail" aria-label="PRD sections">
+        <span class="prd-rail__line" aria-hidden="true"><span class="prd-rail__fill"></span></span>
+        <ol class="prd-rail__list">
+          <li><a href="#overview"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">01</span><span class="prd-rail__name">Overview</span></a></li>
+          <li><a href="#problem"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">02</span><span class="prd-rail__name">Problem and evidence</span></a></li>
+          <li><a href="#personas"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">03</span><span class="prd-rail__name">Personas and jobs to be done</span></a></li>
+          <li><a href="#journey"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">04</span><span class="prd-rail__name">Journey, current to proposed</span></a></li>
+          <li><a href="#scope"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">05</span><span class="prd-rail__name">Scope, in and out</span></a></li>
+          <li><a href="#functional"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">06</span><span class="prd-rail__name">Functional requirements</span></a></li>
+          <li><a href="#nonfunctional"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">07</span><span class="prd-rail__name">Non functional requirements</span></a></li>
+          <li><a href="#rules"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">08</span><span class="prd-rail__name">Business rules</span></a></li>
+          <li><a href="#stories"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">09</span><span class="prd-rail__name">User stories with acceptance criteria</span></a></li>
+          <li><a href="#edge"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">10</span><span class="prd-rail__name">Edge cases and exceptions</span></a></li>
+          <li><a href="#ai"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">11</span><span class="prd-rail__name">AI requirements and human oversight</span></a></li>
+          <li><a href="#data"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">12</span><span class="prd-rail__name">Data, privacy and compliance</span></a></li>
+          <li><a href="#metrics"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">13</span><span class="prd-rail__name">Success metrics</span></a></li>
+          <li><a href="#risks"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">14</span><span class="prd-rail__name">Risks</span></a></li>
+          <li><a href="#roadmap"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">15</span><span class="prd-rail__name">MVP and roadmap</span></a></li>
+          <li><a href="#competitors"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">16</span><span class="prd-rail__name">Competitors</span></a></li>
+          <li><a href="#evidence"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">17</span><span class="prd-rail__name">Evidence log</span></a></li>
+          <li><a href="#questions"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">18</span><span class="prd-rail__name">Open questions</span></a></li>
+          <li><a href="#trace"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">19</span><span class="prd-rail__name">Traceability</span></a></li>
+          <li><a href="#reflection"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">20</span><span class="prd-rail__name">Reflection</span></a></li>
+        </ol>
+      </nav>
+
+      <div class="prd-panels">
+        <section class="panel" id="overview" data-panel aria-labelledby="h-overview">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">01</span>
+            <h2 class="panel__title" id="h-overview">Overview</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p>Candidates often receive silence or generic rejections, and recruiters have no simple way to give structured feedback. This draft PRD covers a first slice: recruiters choose a structured reason when they reject an application, a clear note is drafted from that choice and approved by a human, and candidates receive it. Skills based profiles, ATS integrations and employer discovery are later options. The first product slice has not been selected by evidence yet, and this PRD is a working proposal.</p>
+          </div>
+        </section>
+
+        <section class="panel" id="problem" data-panel aria-labelledby="h-problem">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">02</span>
+            <h2 class="panel__title" id="h-problem">Problem and evidence</h2>
+            <span class="tag tag--assumption">Assumption</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list">
+              <li><strong>P1</strong> Candidates frequently receive silence or generic rejections and cannot tell what to improve.</li>
+              <li><strong>P2</strong> Recruiters handle high volumes and have limited time to give feedback.</li>
+              <li><strong>P3</strong> Screening configurations may exclude relevant candidates (Hypothesis, to be investigated).</li>
+              <li><strong>P4</strong> A feedback system must never invent rejection reasons, and must separate employer decisions from independent analysis.</li>
+            </ul>
+            <aside class="callout callout--evidence">
+              <p>These come from my own experience in the India and UAE job markets. Several statistics from earlier research discussions are unverified and are not used here. A reported example about keyword mismatch in screening is also unverified and is not used.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel" id="personas" data-panel aria-labelledby="h-personas">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">03</span>
+            <h2 class="panel__title" id="h-personas">Personas and jobs to be done</h2>
+            <span class="tag tag--assumption">Assumption</span>
+          </header>
+          <div class="panel__body">
+            <aside class="callout callout--warn">
+              <p>Hypothetical personas based on assumptions, not interview data.</p>
+            </aside>
+            <div class="dual">
+              <article class="mini-card">
+                <h3 class="mini-card__title">Candidate</h3>
+                <p>An early career person or career changer who wants to know what to improve.</p>
+              </article>
+              <article class="mini-card">
+                <h3 class="mini-card__title">Recruiter or HR coordinator</h3>
+                <p>At a small or mid sized employer, with high application volume and little time.</p>
+              </article>
+            </div>
+            <h3 class="sub-head">Jobs to be done</h3>
+            <ul class="bullet-list quotes">
+              <li>When I am rejected, I want to know what to improve so my next application is stronger.</li>
+              <li>When I reject many applicants, I want to give a clear, safe reason quickly.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="journey" data-panel aria-labelledby="h-journey">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">04</span>
+            <h2 class="panel__title" id="h-journey">Journey, current to proposed</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <div class="journey" data-anim="journey">
+              <div class="journey__stage">
+                <svg class="journey__svg" viewBox="0 0 900 240" aria-hidden="true" focusable="false">
+                  <path class="journey__tangle" d="M 48 196 C 92 148 128 226 168 182 C 196 150 140 118 186 106 C 232 94 256 170 292 140 C 314 121 274 72 322 80 C 368 88 336 168 384 148 C 424 131 404 58 452 68 C 500 78 470 164 518 140 C 558 120 520 52 578 68 C 626 81 598 170 646 150 C 692 131 654 68 712 88 C 760 105 736 178 786 158 C 822 143 830 96 868 104"/>
+                  <path class="journey__tangle journey__tangle--spur" d="M 168 182 C 190 200 210 208 224 206 M 322 80 C 336 58 356 50 372 52 M 452 68 C 466 44 486 38 502 42 M 578 68 C 592 44 612 38 628 44 M 712 88 C 726 66 746 60 762 64"/>
+                  <path class="journey__clean" d="M 48 200 C 150 200 190 196 240 178 C 300 156 300 128 360 124 C 470 118 520 104 580 96 C 660 86 720 62 780 52 C 820 46 848 40 868 36"/>
+                  <g class="journey__dots journey__dots--now">
+                    <circle cx="48" cy="196" r="5"/><circle cx="168" cy="182" r="4"/><circle cx="292" cy="140" r="4"/><circle cx="384" cy="148" r="4"/><circle cx="518" cy="140" r="4"/><circle cx="646" cy="150" r="4"/><circle cx="786" cy="158" r="4"/><circle cx="868" cy="104" r="5"/>
+                  </g>
+                  <g class="journey__dots journey__dots--next">
+                    <circle cx="48" cy="200" r="5"/><circle cx="240" cy="178" r="4"/><circle cx="360" cy="124" r="4"/><circle cx="580" cy="96" r="4"/><circle cx="780" cy="52" r="4"/><circle cx="868" cy="36" r="5"/>
+                  </g>
+                </svg>
+                <span class="journey__runner" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+              </div>
+              <div class="journey__labels">
+                <div class="journey__label journey__label--now">
+                  <span class="journey__tag">Current journey</span>
+                  <ol class="journey__steps">
+                    <li>Apply</li>
+                    <li>Wait</li>
+                    <li>Silence or generic rejection</li>
+                    <li>No learning</li>
+                    <li>Apply again</li>
+                  </ol>
+                </div>
+                <div class="journey__label journey__label--next">
+                  <span class="journey__tag">Proposed journey</span>
+                  <ol class="journey__steps">
+                    <li>Apply</li>
+                    <li>Recruiter decision</li>
+                    <li>Reason code</li>
+                    <li>Drafted note</li>
+                    <li>Human approval</li>
+                    <li>Candidate reads strengths and gaps</li>
+                    <li>Improves</li>
+                    <li>Applies again</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="scope" data-panel aria-labelledby="h-scope">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">05</span>
+            <h2 class="panel__title" id="h-scope">Scope, in and out</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="scope">
+              <div class="scope__col scope__col--in">
+                <h3 class="scope__title">In scope</h3>
+                <ul class="bullet-list">
+                  <li>Fixed reason code list (mandatory requirement not met, preferred qualification not shown, application incomplete, role filled or withdrawn, other)</li>
+                  <li>Draft note</li>
+                  <li>Human approval</li>
+                  <li>Audit log</li>
+                  <li>Candidate note view</li>
+                  <li>Optional independent application insight, clearly labelled as independent</li>
+                </ul>
+              </div>
+              <div class="scope__col scope__col--out">
+                <h3 class="scope__title">Out of scope</h3>
+                <ul class="bullet-list">
+                  <li>Candidate ranking or scores</li>
+                  <li>Automatic rejection</li>
+                  <li>ATS integrations</li>
+                  <li>Employer directory</li>
+                  <li>Scraping vacancies</li>
+                  <li>Mentoring marketplace</li>
+                  <li>Salary data</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="functional" data-panel aria-labelledby="h-functional">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">06</span>
+            <h2 class="panel__title" id="h-functional">Functional requirements</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="panel__lede">Eight requirements for the first slice. Open any card to read its rationale, evidence status and acceptance criteria.</p>
+            <ul class="req-grid">
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR1</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Recruiter selects one reason code when rejecting.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR1</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span>Structured input prevents invented reasons.</span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span>Assumption.</span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span>Given a rejection, when the recruiter submits without a code, the system blocks and asks for one.</span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR2</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">The draft note uses only the chosen code and an optional recruiter comment.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR2</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span>Reviewed sample drafts contain no reason that was not selected.</span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR3</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">A human approves every note before it is sent.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR3</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span>No note is sent without approval, and approval is logged with user and time.</span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR4</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Notes separate Employer feedback from Independent insight with different labels.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR4</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR5</span><span class="prio prio--should">Should</span></span>
+                      <span class="req-card__title">Candidates can reply with a clarification or correction request.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR5</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR6</span><span class="prio prio--should">Should</span></span>
+                      <span class="req-card__title">Independent insight compares a candidate's own CV with the posting and lists possible gaps with evidence from both texts, labelled not an employer decision.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR6</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR7</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Audit log of codes, drafts, approvals and sends.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR7</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">HFR8</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Candidate data deletion on request.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">HFR8</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="nonfunctional" data-panel aria-labelledby="h-nonfunctional">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">07</span>
+            <h2 class="panel__title" id="h-nonfunctional">Non functional requirements</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list ids">
+              <li><strong>HNFR1</strong> Meets WCAG AA.</li>
+              <li><strong>HNFR2</strong> Privacy by design, minimal data, retention limits to be set with legal advice.</li>
+              <li><strong>HNFR3</strong> Every note traceable to its selected code.</li>
+              <li><strong>HNFR4</strong> If the AI is unavailable, fall back to template text.</li>
+              <li><strong>HNFR5</strong> Fairness testing before any pilot, method to be defined.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="rules" data-panel aria-labelledby="h-rules">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">08</span>
+            <h2 class="panel__title" id="h-rules">Business rules</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list ids">
+              <li><strong>HBR1</strong> Never disclose other applicants' information.</li>
+              <li><strong>HBR2</strong> No scores or ranks shown to candidates in the first slice.</li>
+              <li><strong>HBR3</strong> Employers choose per role whether to send feedback.</li>
+              <li><strong>HBR4</strong> Mandatory and preferred criteria must be recorded separately.</li>
+              <li><strong>HBR5</strong> Reasons are limited to the employer approved list.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="stories" data-panel aria-labelledby="h-stories">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">09</span>
+            <h2 class="panel__title" id="h-stories">User stories with acceptance criteria</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="panel__lede">Six stories for the first slice. The acceptance criteria are not written yet.</p>
+            <ul class="story-list">
+              <li class="story">
+                <p class="story__text">As a recruiter, I pick a reason in one click so I can reject quickly.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a recruiter, I approve a drafted note so I stay in control.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a candidate, I read what was missing so I can improve.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a candidate, I can ask for a correction if I think a reason is wrong.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As an employer admin, I set which reasons are allowed.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a candidate, I request deletion of my data.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="edge" data-panel aria-labelledby="h-edge">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">10</span>
+            <h2 class="panel__title" id="h-edge">Edge cases and exceptions</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list">
+              <li>Free text in other contains sensitive or discriminatory content, so it is flagged for review.</li>
+              <li>Candidate disputes a reason.</li>
+              <li>Role withdrawn after rejection.</li>
+              <li>Duplicate applications.</li>
+              <li>The draft contains an unsupported claim, so it is blocked.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="ai" data-panel aria-labelledby="h-ai">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">11</span>
+            <h2 class="panel__title" id="h-ai">AI requirements and human oversight</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list">
+              <li>The model only rewrites structured inputs into clear language.</li>
+              <li>It never infers protected characteristics or hidden reasons.</li>
+              <li>A human reviews every note.</li>
+              <li>Output quality is judged on a sample set reviewed by humans. No results exist yet.</li>
+              <li>Model inputs and outputs are logged for audit.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="data" data-panel aria-labelledby="h-data">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">12</span>
+            <h2 class="panel__title" id="h-data">Data, privacy and compliance</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <h3 class="sub-head">Data items</h3>
+            <ul class="chip-row">
+              <li class="chip">Application ID</li>
+              <li class="chip">Role</li>
+              <li class="chip">Reason code</li>
+              <li class="chip">Optional comment</li>
+              <li class="chip">Draft</li>
+              <li class="chip">Approved text</li>
+              <li class="chip">Timestamps</li>
+            </ul>
+            <p>CV text is used only for the independent insight feature, with consent.</p>
+            <h3 class="sub-head">To research</h3>
+            <ul class="bullet-list">
+              <li>UAE personal data protection law</li>
+              <li>India's DPDP framework</li>
+              <li>GDPR where relevant</li>
+              <li>Whether recruitment use falls under high risk rules in the EU AI Act</li>
+              <li>Employment discrimination law</li>
+              <li>Automated decision safeguards</li>
+              <li>Retention and deletion</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="metrics" data-panel aria-labelledby="h-metrics">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">13</span>
+            <h2 class="panel__title" id="h-metrics">Success metrics</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="panel__lede">No targets yet.</p>
+            <ul class="chip-row">
+              <li class="chip">Recruiter time per rejection</li>
+              <li class="chip">Share of rejected candidates who receive a reason</li>
+              <li class="chip">Candidate rating of usefulness</li>
+              <li class="chip">Feedback accuracy as judged by recruiters</li>
+              <li class="chip">Dispute rate</li>
+              <li class="chip">Employer adoption</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="risks" data-panel aria-labelledby="h-risks">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">14</span>
+            <h2 class="panel__title" id="h-risks">Risks</h2>
+            <span class="tag tag--assumption">Assumption</span>
+          </header>
+          <div class="panel__body">
+            <div class="risk" data-anim="risk">
+              <div class="risk__frame">
+                <span class="risk__ylabel">Impact</span>
+                <div class="risk__grid">
+                <div class="risk__cell risk__cell--ih risk__cell--ll">
+
+                </div>
+                <div class="risk__cell risk__cell--ih risk__cell--lm">
+
+                </div>
+                <div class="risk__cell risk__cell--ih risk__cell--lh">
+                    <span class="risk-tile risk-tile--high" data-lag="0"><span class="risk-tile__name">Employers do not adopt</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="1"><span class="risk-tile__name">Legal exposure from stated reasons</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="2"><span class="risk-tile__name">Recruiters see it as extra work</span><span class="risk-tile__rating">High</span></span>
+                </div>
+                <div class="risk__cell risk__cell--im risk__cell--ll">
+
+                </div>
+                <div class="risk__cell risk__cell--im risk__cell--lm">
+                    <span class="risk-tile risk-tile--medium" data-lag="0"><span class="risk-tile__name">AI invents a reason, reduced by structured inputs</span><span class="risk-tile__rating">Medium</span></span>
+                    <span class="risk-tile risk-tile--medium" data-lag="1"><span class="risk-tile__name">Bias in how codes are used</span><span class="risk-tile__rating">Medium</span></span>
+                    <span class="risk-tile risk-tile--medium" data-lag="2"><span class="risk-tile__name">Incumbents add the feature</span><span class="risk-tile__rating">Medium</span></span>
+                    <span class="risk-tile risk-tile--medium" data-lag="3"><span class="risk-tile__name">Independent insight mistaken for an official decision</span><span class="risk-tile__rating">Medium</span></span>
+                    <span class="risk-tile risk-tile--medium" data-lag="4"><span class="risk-tile__name">Data security</span><span class="risk-tile__rating">Medium</span></span>
+                </div>
+                <div class="risk__cell risk__cell--im risk__cell--lh">
+
+                </div>
+                <div class="risk__cell risk__cell--il risk__cell--ll">
+
+                </div>
+                <div class="risk__cell risk__cell--il risk__cell--lm">
+
+                </div>
+                <div class="risk__cell risk__cell--il risk__cell--lh">
+
+                </div>
+                </div>
+                <div class="risk__xaxis"><span>Low</span><span>Medium</span><span>High</span></div>
+                <span class="risk__xlabel">Likelihood</span>
+              </div>
+              <p class="risk__note">Initial ratings are my own judgment and are untested.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="roadmap" data-panel aria-labelledby="h-roadmap">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">15</span>
+            <h2 class="panel__title" id="h-roadmap">MVP and roadmap</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="roadmap" data-anim="roadmap">
+              <div class="roadmap__col">
+                <h3 class="roadmap__name">Now</h3>
+                <ul class="roadmap__list">
+                  <li class="rm-card" data-lag="0">
+                    <span class="rm-card__id">NO1</span>
+                    <span>Competitor scan</span>
+                  </li>
+                  <li class="rm-card" data-lag="1">
+                    <span class="rm-card__id">NO2</span>
+                    <span>Interview 5 to 8 job seekers and a few recruiters</span>
+                  </li>
+                  <li class="rm-card" data-lag="2">
+                    <span class="rm-card__id">NO3</span>
+                    <span>Verify leads</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="roadmap__col">
+                <h3 class="roadmap__name">Next</h3>
+                <ul class="roadmap__list">
+                  <li class="rm-card" data-lag="0">
+                    <span class="rm-card__id">NE1</span>
+                    <span>Clickable prototype</span>
+                  </li>
+                  <li class="rm-card" data-lag="1">
+                    <span class="rm-card__id">NE2</span>
+                    <span>Test with sample cases</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="roadmap__col">
+                <h3 class="roadmap__name">Later</h3>
+                <ul class="roadmap__list">
+                  <li class="rm-card" data-lag="0">
+                    <span class="rm-card__id">LA1</span>
+                    <span>Skills task and reusable skills profile</span>
+                  </li>
+                  <li class="rm-card" data-lag="1">
+                    <span class="rm-card__id">LA2</span>
+                    <span>ATS integrations</span>
+                  </li>
+                  <li class="rm-card" data-lag="2">
+                    <span class="rm-card__id">LA3</span>
+                    <span>Verified employer and vacancy discovery</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="competitors" data-panel aria-labelledby="h-competitors">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">16</span>
+            <h2 class="panel__title" id="h-competitors">Competitors</h2>
+            <span class="tag tag--quick-scan">Quick scan</span>
+          </header>
+          <div class="panel__body">
+            <div class="table-wrap" data-anim="rows">
+              <table class="prd-table">
+                <caption class="visually-hidden">Competitor list for the hiring feedback exploration</caption>
+                <thead>
+                  <tr>
+                  <th scope="col">Competitor</th>
+                  <th scope="col">Area (from my brief)</th>
+                  <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>LinkedIn</td>
+                    <td>Networking, recruitment, jobs, learning</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Indeed</td>
+                    <td>Job aggregation</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Naukri</td>
+                    <td>Indian marketplace</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Apna</td>
+                    <td>Discovery and networking</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Bayt</td>
+                    <td>Middle East marketplace</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>GulfTalent</td>
+                    <td>Gulf recruitment</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Workday</td>
+                    <td>Enterprise recruitment</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Oracle Recruiting</td>
+                    <td>Enterprise recruitment</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>SAP SuccessFactors</td>
+                    <td>Recruitment and HR</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Greenhouse</td>
+                    <td>Structured hiring</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Eightfold AI</td>
+                    <td>Talent intelligence</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Gloat</td>
+                    <td>Talent marketplace</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Phenom</td>
+                    <td>Talent experience</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Degreed</td>
+                    <td>Learning and skills</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>National Career Service</td>
+                    <td>Indian public service</td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <aside class="callout callout--note">
+              <p>The market already addresses parts of this idea. The combination of features alone is not treated as an advantage.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel" id="evidence" data-panel aria-labelledby="h-evidence">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">17</span>
+            <h2 class="panel__title" id="h-evidence">Evidence log</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="table-wrap" data-anim="rows">
+              <table class="prd-table prd-table--log">
+                <caption class="visually-hidden">Evidence log for the hiring feedback exploration</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Evidence ID</th>
+                    <th scope="col">Claim</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Geography</th>
+                    <th scope="col">Limitations</th>
+                    <th scope="col">Confidence</th>
+                    <th scope="col">Product implication</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="9" class="table-empty">None yet</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <aside class="callout callout--warn">
+              <p>No verified evidence has been collected for this idea yet. Research leads from earlier discussions are not used until their original sources are found.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel" id="questions" data-panel aria-labelledby="h-questions">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">18</span>
+            <h2 class="panel__title" id="h-questions">Open questions</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list questions">
+              <li>Why would employers participate?</li>
+              <li>Does transparent feedback create legal or operational risk?</li>
+              <li>Can feedback be produced without more recruiter work?</li>
+              <li>Would ATS vendors cooperate?</li>
+              <li>Would candidates trust an independent platform?</li>
+              <li>Can candidate improvement be measured?</li>
+              <li>Who pays?</li>
+              <li>Which module has standalone value?</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="trace" data-panel aria-labelledby="h-trace">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">19</span>
+            <h2 class="panel__title" id="h-trace">Traceability</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="trace" data-anim="trace">
+              <div class="trace__cols">
+                <div class="trace__col trace__col--problem">
+                  <h3 class="trace__head">Problem</h3>
+                  <ul class="trace__list">
+                <li class="tn tn--problem" id="tn-P1" data-p="P1" data-reqs="HFR1 HFR2 HFR3" data-metric="M1" tabindex="0">
+                  <span class="tn__id">P1</span>
+                  <span class="tn__text">Silence or generic rejections</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P2" data-p="P2" data-reqs="HFR1 HFR3" data-metric="M2" tabindex="0">
+                  <span class="tn__id">P2</span>
+                  <span class="tn__text">Recruiters have limited time</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P3" data-p="P3" data-reqs="" data-metric="" tabindex="0">
+                  <span class="tn__id">P3</span>
+                  <span class="tn__text">Screening may exclude relevant candidates</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P4" data-p="P4" data-reqs="HFR2 HFR4 HFR6" data-metric="M3" tabindex="0">
+                  <span class="tn__id">P4</span>
+                  <span class="tn__text">Never invent a reason</span>
+                </li>
+                  </ul>
+                </div>
+                <div class="trace__col trace__col--req">
+                  <h3 class="trace__head">Requirement</h3>
+                  <ul class="trace__list">
+                <li class="tn tn--req" id="tn-HFR1" data-key="HFR1">
+                  <span class="tn__id">HFR1</span>
+                  <span class="tn__text">Reason code required</span>
+                </li>
+                <li class="tn tn--req" id="tn-HFR2" data-key="HFR2">
+                  <span class="tn__id">HFR2</span>
+                  <span class="tn__text">Draft uses only the code</span>
+                </li>
+                <li class="tn tn--req" id="tn-HFR3" data-key="HFR3">
+                  <span class="tn__id">HFR3</span>
+                  <span class="tn__text">Human approval</span>
+                </li>
+                <li class="tn tn--req" id="tn-HFR4" data-key="HFR4">
+                  <span class="tn__id">HFR4</span>
+                  <span class="tn__text">Separate labels</span>
+                </li>
+                <li class="tn tn--req" id="tn-HFR6" data-key="HFR6">
+                  <span class="tn__id">HFR6</span>
+                  <span class="tn__text">Independent insight</span>
+                </li>
+                  </ul>
+                </div>
+                <div class="trace__col trace__col--metric">
+                  <h3 class="trace__head">Metric</h3>
+                  <ul class="trace__list">
+                <li class="tn tn--metric" id="tn-M1" data-key="M1">
+                  <span class="tn__id">M1</span>
+                  <span class="tn__text">Share of rejected candidates who receive a reason</span>
+                </li>
+                <li class="tn tn--metric" id="tn-M2" data-key="M2">
+                  <span class="tn__id">M2</span>
+                  <span class="tn__text">Recruiter time per rejection</span>
+                </li>
+                <li class="tn tn--metric" id="tn-M3" data-key="M3">
+                  <span class="tn__id">M3</span>
+                  <span class="tn__text">Feedback accuracy</span>
+                </li>
+                  </ul>
+                </div>
+              </div>
+              <svg class="trace__lines" aria-hidden="true" focusable="false"></svg>
+            </div>
+            <p class="trace__note">P3 links to a research task and has no requirement yet. Hover a line to see the items it joins.</p>
+          </div>
+        </section>
+
+        <section class="panel" id="reflection" data-panel aria-labelledby="h-reflection">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">20</span>
+            <h2 class="panel__title" id="h-reflection">Reflection</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="placeholder"><span class="tbc">To be confirmed</span></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <nav class="case-nav" aria-label="Case studies">
+      <a class="case-nav__link" href="case-travel.html"><span class="case-nav__dir">Previous</span><span class="case-nav__title">Visa safe travel planner</span></a>
+      <a class="case-nav__link case-nav__link--next" href="index.html#explore"><span class="case-nav__dir">Next</span><span class="case-nav__title">All explorations</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">Farzeen Hamza &copy; 2026</footer>
+
+  <script src="js/puzzle.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

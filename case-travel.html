@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visa safe travel planner | Farzeen Hamza</title>
+  <meta name="description" content="A draft PRD for a visa safe travel planner: one trip plan built around the visa timeline, with tracking and a safer booking order.">
+  <meta name="theme-color" content="#05060A">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2305060A'/%3E%3Cpath d='M14 14h16c0 6 6 6 6 12s-6 6-6 12H14z' fill='none' stroke='%235CE1E6' stroke-width='3'/%3E%3Ccircle cx='44' cy='44' r='6' fill='%233DDC97'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="case-page prd-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="flyer-1" d="M 0 0 L 40.3 0 C 33.73 -0.53 23.88 -6.88 39.65 -11.91 C 52.13 -15.09 61.32 -15.09 73.81 -11.91 C 89.57 -6.88 79.72 -0.53 73.15 0 L 100 0 L 100 36.9 C 99.5 29.03 93.52 17.22 88.79 36.11 C 85.8 51.06 85.8 62.08 88.79 77.03 C 93.52 95.92 99.5 84.11 100 76.24 L 100 100 L 0 100 L 0 77.21 C 0.5 84.74 6.49 96.03 11.23 77.96 C 14.23 63.66 14.23 53.12 11.23 38.82 C 6.49 20.75 0.5 32.04 0 39.57 L 0 0 Z"/>
+      <path id="flyer-2" d="M 0 0 L 29.91 0 C 23.34 0.43 13.48 5.55 29.26 9.61 C 41.75 12.17 50.95 12.17 63.44 9.61 C 79.22 5.55 69.36 0.43 62.78 0 L 100 0 L 100 31.08 C 100.56 22.77 107.29 10.29 112.61 30.25 C 115.97 46.04 115.97 57.68 112.61 73.48 C 107.29 93.43 100.56 80.96 100 72.65 L 100 100 L 68.36 100 C 76.26 99.39 88.11 92.1 69.15 86.32 C 54.14 82.68 43.07 82.68 28.06 86.32 C 9.1 92.1 20.95 99.39 28.85 100 L 0 100 L 0 0 Z"/>
+      <path id="flyer-3" d="M 0 0 L 100 0 L 100 26.17 C 99.45 19.59 92.9 9.72 87.71 25.51 C 84.44 38.02 84.44 47.23 87.71 59.73 C 92.9 75.53 99.45 65.65 100 59.07 L 100 100 L 60.26 100 C 66.8 100.5 76.6 106.47 60.92 111.2 C 48.5 114.19 39.35 114.19 26.93 111.2 C 11.25 106.47 21.05 100.5 27.59 100 L 0 100 L 0 76.36 C -0.5 84.3 -6.47 96.22 -11.2 77.16 C -14.19 62.07 -14.19 50.95 -11.2 35.86 C -6.47 16.8 -0.5 28.71 0 36.65 L 0 0 Z"/>
+    </defs>
+  </svg>
+
+  <div class="world" aria-hidden="true">
+    <div class="world__theme is-on" data-theme="explore"></div>
+    <div class="world__stars" data-depth="1"></div>
+    <div class="world__stars" data-depth="2"></div>
+    <div class="world__stars" data-depth="3"></div>
+    <div class="world__grain"></div>
+    <div class="world__vignette"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#flyer-1" fill="none" stroke="#5CE1E6" stroke-width="6"/></svg>
+      Farzeen Hamza
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html#opening">Journey</a>
+      <a href="index.html#explore">Explorations</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="prd-hero" aria-labelledby="case-title">
+      <div class="prd-hero__inner">
+        <div class="prd-hero__copy">
+          <a class="back-link" href="index.html#explore">Back to the journey</a>
+          <p class="eyebrow"><svg class="eyebrow-piece" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#flyer-1"/></svg>Exploration one</p>
+          <h1 id="case-title">Visa safe travel planner</h1>
+          <p class="prd-sub">Integrated travel marketplace, PRD v0.1</p>
+          <ul class="badge-row">
+            <li class="badge">PRD v0.1 draft</li>
+            <li class="badge">Independent self initiated exploration</li>
+            <li class="badge">Concept and research, not a launched product</li>
+          </ul>
+          <div class="revision">
+            <h2 class="revision__title">Revision history</h2>
+            <ol class="revision__list">
+              <li><span class="revision__id">v0.1</span><span class="revision__date">Nov 2026</span><span class="revision__note">First draft from my research brief</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="prd-hero__art">
+          <div class="case-hero__scene" aria-hidden="true">
+          <svg viewBox="0 0 400 250" role="presentation" focusable="false">
+                  <defs>
+                    <linearGradient id="tSky" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#071722"/><stop offset="1" stop-color="#0b2a33"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="250" fill="url(#tSky)"/>
+                  <g opacity=".8">
+                    <circle cx="60" cy="30" r="1.2" fill="#EAF2FF"/><circle cx="140" cy="18" r="1" fill="#EAF2FF"/>
+                    <circle cx="250" cy="34" r="1.1" fill="#EAF2FF"/><circle cx="330" cy="22" r="1" fill="#EAF2FF"/>
+                  </g>
+                  <g class="anim-cloud" opacity=".5">
+                    <ellipse cx="90" cy="52" rx="26" ry="7" fill="#EAF2FF" opacity=".14"/>
+                    <ellipse cx="112" cy="48" rx="16" ry="6" fill="#EAF2FF" opacity=".12"/>
+                  </g>
+                  <g class="anim-plane">
+                    <path d="M14 40 L46 30 L30 44 L28 54 L24 46 Z" fill="#EAF2FF" opacity=".92"/>
+                    <path d="M46 30 L30 44 L24 46" fill="none" stroke="#0b2a33" stroke-width="1" opacity=".35"/>
+                  </g>
+                  <path class="travel-hill-back" d="M0 150 Q70 96 150 142 T300 138 T400 150 V250 H0 Z"/>
+                  <path class="travel-hill" d="M0 182 Q90 132 180 176 T330 170 T400 186 V250 H0 Z"/>
+                  <path class="travel-river" d="M232 250 C246 210 214 190 236 158 C252 134 300 132 316 110" opacity=".5"/>
+                  <path class="travel-hill-front" d="M0 214 Q80 186 170 210 T320 206 T400 216 V250 H0 Z"/>
+                  <path class="travel-path" d="M22 236 C90 224 110 200 160 202 C214 204 226 226 288 214"/>
+                  <g transform="translate(56 200)">
+                    <g class="anim-walk">
+                      <g class="anim-bob">
+                        <path d="M-9 0 q-1 -13 9 -13 q10 0 9 13 v13 q0 5 -5 5 h-8 q-5 0 -5 -5 z" fill="#EAF2FF"/>
+                        <circle cx="0" cy="-19" r="7" fill="#EAF2FF"/>
+                        <path class="travel-face" d="M-3.6 -20.5 q1.7 2 3.6 2 q1.9 0 3.6 -2"/>
+                        <path d="M-4.5 18 v5 M4.5 18 v5" stroke="#EAF2FF" stroke-width="3.4" stroke-linecap="round"/>
+                        <path d="M8 -6 q6 2 6 8" fill="none" stroke="#EAF2FF" stroke-width="2.6" stroke-linecap="round"/>
+                        <g transform="translate(15 4)">
+                          <rect x="0" y="0" width="13" height="17" rx="3" fill="#FFB547"/>
+                          <path d="M4 -4 v4 M9 -4 v4" stroke="#FFB547" stroke-width="1.6" stroke-linecap="round"/>
+                          <path d="M0 8 h13" stroke="#0A1020" stroke-width="1.2" opacity=".45"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g transform="translate(288 40)">
+                    <rect x="0" y="0" width="70" height="50" rx="8" fill="#EAF2FF" opacity=".95"/>
+                    <rect x="8" y="9" width="22" height="16" rx="3" fill="#0B2A33" opacity=".22"/>
+                    <rect x="37" y="9" width="24" height="3" rx="1.5" fill="#0B2A33" opacity=".3"/>
+                    <rect x="37" y="16" width="17" height="3" rx="1.5" fill="#0B2A33" opacity=".22"/>
+                    <rect x="8" y="33" width="52" height="3" rx="1.5" fill="#0B2A33" opacity=".18"/>
+                    <g class="anim-stamp">
+                      <circle cx="52" cy="33" r="12" fill="rgba(61,220,151,.22)" stroke="#3DDC97" stroke-width="1.6"/>
+                      <path d="M46 33 l4.5 4.5 l7.5 -9" fill="none" stroke="#3DDC97" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+                  <g class="anim-price">
+                    <rect x="252" y="196" width="118" height="30" rx="15" fill="rgba(255,181,71,.16)" stroke="#FFB547" stroke-width="1.2"/>
+                    <circle cx="270" cy="211" r="6.5" fill="none" stroke="#FFB547" stroke-width="1.4"/>
+                    <path d="M266.6 211 l2.4 2.4 l4.4 -4.8" fill="none" stroke="#FFB547" stroke-width="1.6" stroke-linecap="round"/>
+                    <text x="284" y="215" fill="#FFB547" font-family="JetBrains Mono, monospace" font-size="9.5" letter-spacing="1.4">MONTHLY</text>
+                  </g>
+                  <g class="anim-smile" transform="translate(60 172)">
+                    <path d="M-6 0 q6 7 12 0" fill="none" stroke="#3DDC97" stroke-width="1.8" stroke-linecap="round"/>
+                  </g>
+                </svg>
+                  </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="prd-shell">
+      <nav class="prd-rail" aria-label="PRD sections">
+        <span class="prd-rail__line" aria-hidden="true"><span class="prd-rail__fill"></span></span>
+        <ol class="prd-rail__list">
+          <li><a href="#overview"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">01</span><span class="prd-rail__name">Overview</span></a></li>
+          <li><a href="#problem"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">02</span><span class="prd-rail__name">Problem and evidence</span></a></li>
+          <li><a href="#personas"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">03</span><span class="prd-rail__name">Personas and jobs to be done</span></a></li>
+          <li><a href="#journey"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">04</span><span class="prd-rail__name">Journey, current to proposed</span></a></li>
+          <li><a href="#scope"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">05</span><span class="prd-rail__name">Scope, in and out</span></a></li>
+          <li><a href="#functional"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">06</span><span class="prd-rail__name">Functional requirements</span></a></li>
+          <li><a href="#nonfunctional"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">07</span><span class="prd-rail__name">Non functional requirements</span></a></li>
+          <li><a href="#rules"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">08</span><span class="prd-rail__name">Business rules</span></a></li>
+          <li><a href="#stories"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">09</span><span class="prd-rail__name">User stories with acceptance criteria</span></a></li>
+          <li><a href="#edge"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">10</span><span class="prd-rail__name">Edge cases and exceptions</span></a></li>
+          <li><a href="#ai"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">11</span><span class="prd-rail__name">AI requirements and human oversight</span></a></li>
+          <li><a href="#data"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">12</span><span class="prd-rail__name">Data, privacy and compliance</span></a></li>
+          <li><a href="#metrics"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">13</span><span class="prd-rail__name">Success metrics</span></a></li>
+          <li><a href="#risks"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">14</span><span class="prd-rail__name">Risks</span></a></li>
+          <li><a href="#roadmap"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">15</span><span class="prd-rail__name">MVP and roadmap</span></a></li>
+          <li><a href="#competitors"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">16</span><span class="prd-rail__name">Competitors</span></a></li>
+          <li><a href="#evidence"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">17</span><span class="prd-rail__name">Evidence log</span></a></li>
+          <li><a href="#questions"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span><span class="prd-rail__num" aria-hidden="true">18</span><span class="prd-rail__name">Open questions</span></a></li>
+          <li><a href="#trace"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span><span class="prd-rail__num" aria-hidden="true">19</span><span class="prd-rail__name">Traceability</span></a></li>
+          <li><a href="#reflection"><span class="prd-rail__piece" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span><span class="prd-rail__num" aria-hidden="true">20</span><span class="prd-rail__name">Reflection</span></a></li>
+        </ol>
+      </nav>
+
+      <div class="prd-panels">
+        <section class="panel" id="overview" data-panel aria-labelledby="h-overview">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">01</span>
+            <h2 class="panel__title" id="h-overview">Overview</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p>Travel planning is spread across many apps, and travellers who need a visa can lose money by booking before approval. This draft PRD covers a first slice for one traveller corridor, with a working example of a traveller living in India visiting Switzerland. It offers budget first package discovery, a visa timeline with a tracker supplied by a partner agency, and a safer booking order. Financing, paid local guides, traveller matching and 24/7 emergency support are later options. The first product slice has not been selected by evidence yet.</p>
+          </div>
+        </section>
+
+        <section class="panel" id="problem" data-panel aria-labelledby="h-problem">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">02</span>
+            <h2 class="panel__title" id="h-problem">Problem and evidence</h2>
+            <span class="tag tag--assumption">Assumption</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list">
+              <li><strong>P1</strong> Planning is fragmented across flights, stays, visas, insurance and local help (Assumption).</li>
+              <li><strong>P2</strong> Budget is hard to estimate because costs are calculated separately (Assumption).</li>
+              <li><strong>P3</strong> Booking before visa approval can cost money, and embassy rules and the order of steps differ by nationality and residence (Quick scan, see evidence log).</li>
+              <li><strong>P4</strong> Upfront cost limits international travel, and instalment options already exist on some platforms, so payment alone is not a differentiator (Hypothesis).</li>
+              <li><strong>P5</strong> Travellers may want trustworthy local help (Hypothesis, later).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="personas" data-panel aria-labelledby="h-personas">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">03</span>
+            <h2 class="panel__title" id="h-personas">Personas and jobs to be done</h2>
+            <span class="tag tag--assumption">Assumption</span>
+          </header>
+          <div class="panel__body">
+            <aside class="callout callout--warn">
+              <p>Hypothetical personas based on assumptions, not interview data.</p>
+            </aside>
+            <div class="dual">
+              <article class="mini-card">
+                <h3 class="mini-card__title">Solo traveller or solo parent</h3>
+                <p>Needs a visa, wants a nature focused trip, has a set budget and wants less effort and more safety.</p>
+              </article>
+              <article class="mini-card">
+                <h3 class="mini-card__title">First time international traveller</h3>
+                <p>Budget conscious and new to visa steps.</p>
+              </article>
+            </div>
+            <h3 class="sub-head">Jobs to be done</h3>
+            <ul class="bullet-list quotes">
+              <li>When I plan a trip that needs a visa, I want one clear plan that protects my money so I can book without fear.</li>
+              <li>When I set a budget, I want to see what is included and excluded so there are no surprises.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="journey" data-panel aria-labelledby="h-journey">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">04</span>
+            <h2 class="panel__title" id="h-journey">Journey, current to proposed</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <div class="journey" data-anim="journey">
+              <div class="journey__stage">
+                <svg class="journey__svg" viewBox="0 0 900 240" aria-hidden="true" focusable="false">
+                  <path class="journey__tangle" d="M 48 196 C 92 148 128 226 168 182 C 196 150 140 118 186 106 C 232 94 256 170 292 140 C 314 121 274 72 322 80 C 368 88 336 168 384 148 C 424 131 404 58 452 68 C 500 78 470 164 518 140 C 558 120 520 52 578 68 C 626 81 598 170 646 150 C 692 131 654 68 712 88 C 760 105 736 178 786 158 C 822 143 830 96 868 104"/>
+                  <path class="journey__tangle journey__tangle--spur" d="M 168 182 C 190 200 210 208 224 206 M 322 80 C 336 58 356 50 372 52 M 452 68 C 466 44 486 38 502 42 M 578 68 C 592 44 612 38 628 44 M 712 88 C 726 66 746 60 762 64"/>
+                  <path class="journey__clean" d="M 48 200 C 150 200 190 196 240 178 C 300 156 300 128 360 124 C 470 118 520 104 580 96 C 660 86 720 62 780 52 C 820 46 848 40 868 36"/>
+                  <g class="journey__dots journey__dots--now">
+                    <circle cx="48" cy="196" r="5"/><circle cx="168" cy="182" r="4"/><circle cx="292" cy="140" r="4"/><circle cx="384" cy="148" r="4"/><circle cx="518" cy="140" r="4"/><circle cx="646" cy="150" r="4"/><circle cx="786" cy="158" r="4"/><circle cx="868" cy="104" r="5"/>
+                  </g>
+                  <g class="journey__dots journey__dots--next">
+                    <circle cx="48" cy="200" r="5"/><circle cx="240" cy="178" r="4"/><circle cx="360" cy="124" r="4"/><circle cx="580" cy="96" r="4"/><circle cx="780" cy="52" r="4"/><circle cx="868" cy="36" r="5"/>
+                  </g>
+                </svg>
+                <span class="journey__runner" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+              </div>
+              <div class="journey__labels">
+                <div class="journey__label journey__label--now">
+                  <span class="journey__tag">Current journey</span>
+                  <ol class="journey__steps">
+                    <li>Research destinations</li>
+                    <li>Compare flights and hotels on separate sites</li>
+                    <li>Find visa rules</li>
+                    <li>Book</li>
+                    <li>Apply for visa</li>
+                    <li>Wait</li>
+                    <li>Hope</li>
+                  </ol>
+                </div>
+                <div class="journey__label journey__label--next">
+                  <span class="journey__tag">Proposed journey</span>
+                  <ol class="journey__steps">
+                    <li>Enter budget, dates and taste</li>
+                    <li>Get one recommended package with reasons</li>
+                    <li>See visa steps and timeline</li>
+                    <li>Hold refundable bookings</li>
+                    <li>Track the visa</li>
+                    <li>Confirm non refundable bookings after approval</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="scope" data-panel aria-labelledby="h-scope">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">05</span>
+            <h2 class="panel__title" id="h-scope">Scope, in and out</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="scope">
+              <div class="scope__col scope__col--in">
+                <h3 class="scope__title">In scope</h3>
+                <ul class="bullet-list">
+                  <li>Inputs for passport, residence, dates, travellers, budget and preferences</li>
+                  <li>One recommended package with alternatives on request</li>
+                  <li>Price labels (estimate, live quote, confirmed)</li>
+                  <li>Visa rule summary with source and date</li>
+                  <li>Booking order guided by the visa timeline</li>
+                  <li>Visa tracker showing information from a partner agency</li>
+                  <li>Insurance check against the embassy minimum</li>
+                  <li>Inclusions, exclusions and cancellation terms</li>
+                </ul>
+              </div>
+              <div class="scope__col scope__col--out">
+                <h3 class="scope__title">Out of scope</h3>
+                <ul class="bullet-list">
+                  <li>Lending by the company</li>
+                  <li>24/7 emergency service</li>
+                  <li>Same country traveller matching</li>
+                  <li>Paid companion marketplace</li>
+                  <li>Global coverage</li>
+                  <li>An own booking engine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="functional" data-panel aria-labelledby="h-functional">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">06</span>
+            <h2 class="panel__title" id="h-functional">Functional requirements</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="panel__lede">Eight requirements for the first slice. Open any card to read its rationale, evidence status and acceptance criteria.</p>
+            <ul class="req-grid">
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR1</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Collect passport, residence, dates, travellers, budget and preferences.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR1</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR2</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Show one recommended package with a short reason, and label every price as estimate, live quote or confirmed.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR2</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span>No price is shown without a label.</span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR3</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Show the visa rule summary for the passport with source and date checked and a link to verify with the embassy.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR3</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR4</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Sequence bookings around the visa timeline: refundable holds first, non refundable after approval.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR4</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span>A non refundable booking cannot be confirmed before approval unless the traveller explicitly opts in after a warning.</span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR5</span><span class="prio prio--should">Should</span></span>
+                      <span class="req-card__title">Visa tracker displays checklist, appointment date and status provided by the partner agency. The app never states a visa decision itself.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR5</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR6</span><span class="prio prio--should">Should</span></span>
+                      <span class="req-card__title">Offer insurance through a licensed partner and check the policy against the embassy minimum.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR6</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR7</span><span class="prio prio--must">Must</span></span>
+                      <span class="req-card__title">Show inclusions, exclusions and cancellation terms for the package.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR7</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="req-card">
+                <button class="flip" type="button" aria-pressed="false">
+                  <span class="flip__inner">
+                    <span class="flip__face flip__face--front">
+                      <span class="req-card__top"><span class="req-card__id">TFR8</span><span class="prio prio--could">Could</span></span>
+                      <span class="req-card__title">Later. Show payment options through a licensed partner with total payable, fees and cancellation effects. The platform does not lend money.</span>
+                      <span class="req-card__hint">Open details</span>
+                    </span>
+                    <span class="flip__face flip__face--back">
+                      <span class="req-card__id">TFR8</span>
+                      <span class="req-card__row"><span class="req-card__label">Rationale</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Evidence</span><span><span class="tbc">To be confirmed</span></span></span>
+                      <span class="req-card__row"><span class="req-card__label">Acceptance</span><span><span class="tbc">To be confirmed</span></span></span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="nonfunctional" data-panel aria-labelledby="h-nonfunctional">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">07</span>
+            <h2 class="panel__title" id="h-nonfunctional">Non functional requirements</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list ids">
+              <li><strong>TNFR1</strong> Passport and ID data encrypted and kept to a minimum.</li>
+              <li><strong>TNFR2</strong> Meets WCAG AA.</li>
+              <li><strong>TNFR3</strong> Partial booking failures across suppliers have defined handling and refunds.</li>
+              <li><strong>TNFR4</strong> Visa rule content shows a review date and is re checked on a schedule.</li>
+              <li><strong>TNFR5</strong> Response and availability targets to be defined.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="rules" data-panel aria-labelledby="h-rules">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">08</span>
+            <h2 class="panel__title" id="h-rules">Business rules</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list ids">
+              <li><strong>TBR1</strong> The app guides and prepares, the embassy decides.</li>
+              <li><strong>TBR2</strong> AI never invents availability, prices or visa requirements.</li>
+              <li><strong>TBR3</strong> Every price carries a type label.</li>
+              <li><strong>TBR4</strong> Non refundable bookings follow visa approval by default.</li>
+              <li><strong>TBR5</strong> Every visa statement shows source and date.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="stories" data-panel aria-labelledby="h-stories">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">09</span>
+            <h2 class="panel__title" id="h-stories">User stories with acceptance criteria</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="panel__lede">Six stories for the first slice. The acceptance criteria are not written yet.</p>
+            <ul class="story-list">
+              <li class="story">
+                <p class="story__text">As a traveller, I enter a budget and dates so I get one clear plan.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a traveller, I see the visa steps in order so I know what to do first.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a traveller, I hold refundable bookings so I am not at risk before approval.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a traveller, I track my visa appointment and status in one place.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a traveller, I see what is included and excluded so there are no surprises.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+              <li class="story">
+                <p class="story__text">As a traveller, I check that my insurance meets the embassy minimum.</p>
+                <dl class="story__ac">
+                  <div><dt>Given</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>When</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                  <div><dt>Then</dt><dd><span class="tbc">To be confirmed</span></dd></div>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="edge" data-panel aria-labelledby="h-edge">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">10</span>
+            <h2 class="panel__title" id="h-edge">Edge cases and exceptions</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list">
+              <li>Price changes during checkout.</li>
+              <li>A hotel becomes unavailable after the flight is booked.</li>
+              <li>The visa is refused after refundable holds.</li>
+              <li>Appointment slots are unavailable.</li>
+              <li>A traveller cancels a financed package.</li>
+              <li>A supplier gives inaccurate information.</li>
+              <li>The AI recommends an attraction that is closed.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="ai" data-panel aria-labelledby="h-ai">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">11</span>
+            <h2 class="panel__title" id="h-ai">AI requirements and human oversight</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list">
+              <li>AI works only as a recommendation layer.</li>
+              <li>It reads verified inventory and verified visa content and never creates availability, prices or rules.</li>
+              <li>Visa content is human reviewed.</li>
+              <li>Output is checked against live data on a sample of itineraries. No results exist yet.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="data" data-panel aria-labelledby="h-data">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">12</span>
+            <h2 class="panel__title" id="h-data">Data, privacy and compliance</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <p>Data includes passport details, nationality, residence, dates and preferences including dietary needs, handled as sensitive.</p>
+            <h3 class="sub-head">To research</h3>
+            <ul class="bullet-list">
+              <li>Travel agency and tour operator licensing</li>
+              <li>Package travel rules</li>
+              <li>Consumer protection</li>
+              <li>Refund obligations</li>
+              <li>Payment and lending regulation</li>
+              <li>Insurance distribution</li>
+              <li>Guide licensing</li>
+              <li>Data protection including cross border transfers</li>
+              <li>Marketplace liability</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="metrics" data-panel aria-labelledby="h-metrics">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">13</span>
+            <h2 class="panel__title" id="h-metrics">Success metrics</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="panel__lede">No targets yet.</p>
+            <ul class="chip-row">
+              <li class="chip">Time to plan a trip</li>
+              <li class="chip">Search to booking conversion</li>
+              <li class="chip">Budget accuracy</li>
+              <li class="chip">Booking completion</li>
+              <li class="chip">Refund processing time</li>
+              <li class="chip">Support resolution time</li>
+              <li class="chip">Customer satisfaction</li>
+              <li class="chip">Contribution margin per booking</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="risks" data-panel aria-labelledby="h-risks">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">14</span>
+            <h2 class="panel__title" id="h-risks">Risks</h2>
+            <span class="tag tag--assumption">Assumption</span>
+          </header>
+          <div class="panel__body">
+            <div class="risk" data-anim="risk">
+              <div class="risk__frame">
+                <span class="risk__ylabel">Impact</span>
+                <div class="risk__grid">
+                <div class="risk__cell risk__cell--ih risk__cell--ll">
+
+                </div>
+                <div class="risk__cell risk__cell--ih risk__cell--lm">
+
+                </div>
+                <div class="risk__cell risk__cell--ih risk__cell--lh">
+                    <span class="risk-tile risk-tile--high" data-lag="0"><span class="risk-tile__name">Liability for wrong visa guidance</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="1"><span class="risk-tile__name">Access to supplier inventory and prices</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="2"><span class="risk-tile__name">Partial booking failures</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="3"><span class="risk-tile__name">Established platforms already offer packages and instalments</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="4"><span class="risk-tile__name">Licensing and regulation</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="5"><span class="risk-tile__name">Demand untested</span><span class="risk-tile__rating">High</span></span>
+                    <span class="risk-tile risk-tile--high" data-lag="6"><span class="risk-tile__name">Trust and safety for local assistance (later)</span><span class="risk-tile__rating">High</span></span>
+                </div>
+                <div class="risk__cell risk__cell--im risk__cell--ll">
+
+                </div>
+                <div class="risk__cell risk__cell--im risk__cell--lm">
+                    <span class="risk-tile risk-tile--medium" data-lag="0"><span class="risk-tile__name">Refund exposure and thin margins</span><span class="risk-tile__rating">Medium</span></span>
+                </div>
+                <div class="risk__cell risk__cell--im risk__cell--lh">
+
+                </div>
+                <div class="risk__cell risk__cell--il risk__cell--ll">
+
+                </div>
+                <div class="risk__cell risk__cell--il risk__cell--lm">
+
+                </div>
+                <div class="risk__cell risk__cell--il risk__cell--lh">
+
+                </div>
+                </div>
+                <div class="risk__xaxis"><span>Low</span><span>Medium</span><span>High</span></div>
+                <span class="risk__xlabel">Likelihood</span>
+              </div>
+              <p class="risk__note">Initial ratings are my own judgment and are untested.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="roadmap" data-panel aria-labelledby="h-roadmap">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">15</span>
+            <h2 class="panel__title" id="h-roadmap">MVP and roadmap</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="roadmap" data-anim="roadmap">
+              <div class="roadmap__col">
+                <h3 class="roadmap__name">Now</h3>
+                <ul class="roadmap__list">
+                  <li class="rm-card" data-lag="0">
+                    <span class="rm-card__id">NO1</span>
+                    <span>Verify competitor leads</span>
+                  </li>
+                  <li class="rm-card" data-lag="1">
+                    <span class="rm-card__id">NO2</span>
+                    <span>Verify the visa rules for one corridor</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="roadmap__col">
+                <h3 class="roadmap__name">Next</h3>
+                <ul class="roadmap__list">
+                  <li class="rm-card" data-lag="0">
+                    <span class="rm-card__id">NE1</span>
+                    <span>Interview 5 to 8 travellers who applied for a visa</span>
+                  </li>
+                  <li class="rm-card" data-lag="1">
+                    <span class="rm-card__id">NE2</span>
+                    <span>Build a clickable prototype of the visa safe timeline</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="roadmap__col">
+                <h3 class="roadmap__name">Later</h3>
+                <ul class="roadmap__list">
+                  <li class="rm-card" data-lag="0">
+                    <span class="rm-card__id">LA1</span>
+                    <span>Financing partner</span>
+                  </li>
+                  <li class="rm-card" data-lag="1">
+                    <span class="rm-card__id">LA2</span>
+                    <span>Paid verified local guide</span>
+                  </li>
+                  <li class="rm-card" data-lag="2">
+                    <span class="rm-card__id">LA3</span>
+                    <span>Same country matching</span>
+                  </li>
+                  <li class="rm-card" data-lag="3">
+                    <span class="rm-card__id">LA4</span>
+                    <span>24/7 emergency support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="competitors" data-panel aria-labelledby="h-competitors">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">16</span>
+            <h2 class="panel__title" id="h-competitors">Competitors</h2>
+            <span class="tag tag--quick-scan">Quick scan</span>
+          </header>
+          <div class="panel__body">
+            <div class="table-wrap" data-anim="rows">
+              <table class="prd-table prd-table--scan">
+                <caption class="visually-hidden">Competitors for the visa safe travel planner</caption>
+                <thead>
+                  <tr>
+                  <th scope="col">Competitor</th>
+                  <th scope="col">What it does</th>
+                  <th scope="col">What it lacks for this idea</th>
+                  <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Atlys</td>
+                    <td>Visa application with status tracking from application to delivery.</td>
+                    <td>Not a full trip planner.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>Eazy4</td>
+                    <td>Visa expert who reviews documents, schedules appointments and tracks status.</td>
+                    <td>Focused on the visa.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>VisaBot</td>
+                    <td>Auto booking of Schengen appointments and slot alerts.</td>
+                    <td>Focused on appointments.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>Airopass</td>
+                    <td>Visas, tour packages and insurance in one app, with flights and hotels listed as coming soon.</td>
+                    <td>Booking and trip planning not yet complete.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>Layla</td>
+                    <td>AI itinerary planning with booking links.</td>
+                    <td>Not built around visa timing.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>Trip.com AI planner</td>
+                    <td>A bookable trip from a few questions.</td>
+                    <td>Not built around visa timing.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>Booking Holdings Vayo</td>
+                    <td>Can reserve flights and hotels through an AI agent.</td>
+                    <td>Not built around visa timing.</td>
+                    <td>Checked Nov 2026, re verify</td>
+                  </tr>
+                  <tr>
+                    <td>MakeMyTrip</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>EaseMyTrip</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>EaseMyTrip Raahi</td>
+                    <td>Traveller matching</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Booking.com</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Expedia</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Airbnb Experiences</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Withlocals</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>GetYourGuide</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Viator</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>Klook</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                  <tr>
+                    <td>TripAdvisor</td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td><span class="tbc">To be confirmed</span></td>
+                    <td>Lead, not yet checked</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <aside class="callout callout--note">
+              <p>Most single features already exist. The question is whether the combination, built around the visa timeline, is useful and defensible. Traveller matching is not the same as a verified marketplace for paid guides.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel" id="evidence" data-panel aria-labelledby="h-evidence">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">17</span>
+            <h2 class="panel__title" id="h-evidence">Evidence log</h2>
+            <span class="tag tag--quick-scan">Quick scan</span>
+          </header>
+          <div class="panel__body">
+            <div class="table-wrap" data-anim="rows">
+              <table class="prd-table prd-table--log">
+                <caption class="visually-hidden">Evidence log for the visa safe travel planner</caption>
+                <thead>
+                  <tr>
+                  <th scope="col">Evidence ID</th>
+                  <th scope="col">Claim</th>
+                  <th scope="col">Source</th>
+                  <th scope="col">URL</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Geography</th>
+                  <th scope="col">Limitations</th>
+                  <th scope="col">Confidence</th>
+                  <th scope="col">Product implication</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>EVT1</td>
+                    <td>Atlys offers visa applications with tracking.</td>
+                    <td>Apple App Store listing</td>
+                    <td><a href="https://apps.apple.com/app/in/id1514036839" rel="noopener noreferrer" target="_blank">https://apps.apple.com/app/in/id1514036839</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>App store description</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT2</td>
+                    <td>Eazy4 offers visa expert document review, appointment scheduling and status tracking.</td>
+                    <td>Apple App Store listing</td>
+                    <td><a href="https://apps.apple.com/us/app/eazy4/id6478803373" rel="noopener noreferrer" target="_blank">https://apps.apple.com/us/app/eazy4/id6478803373</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>App store description</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT3</td>
+                    <td>VisaBot offers Schengen appointment auto booking and alerts.</td>
+                    <td>Apple App Store listing</td>
+                    <td><a href="https://apps.apple.com/app/id6738602676" rel="noopener noreferrer" target="_blank">https://apps.apple.com/app/id6738602676</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>App store description</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT4</td>
+                    <td>Airopass combines visas, packages and insurance, with flights and hotels listed as coming soon.</td>
+                    <td>Apple App Store listing</td>
+                    <td><a href="https://apps.apple.com/in/app/airopass/id6749050934" rel="noopener noreferrer" target="_blank">https://apps.apple.com/in/app/airopass/id6749050934</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>May have changed</td>
+                    <td>Low to medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT5</td>
+                    <td>Booking Holdings' agent Vayo can reserve flights and hotels.</td>
+                    <td>Skift</td>
+                    <td><a href="https://skift.com/2026/11/17/booking-holdings-ai-agent-vayo-can-now-reserve-flights-and-hotels/" rel="noopener noreferrer" target="_blank">https://skift.com/2026/11/17/booking-holdings-ai-agent-vayo-can-now-reserve-flights-and-hotels/</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>News report, details may vary by supplier</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT6</td>
+                    <td>Trip.com's AI aims to produce a bookable trip from a few questions.</td>
+                    <td>Skift</td>
+                    <td><a href="https://skift.com/?p=769522" rel="noopener noreferrer" target="_blank">https://skift.com/?p=769522</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>News report</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT7</td>
+                    <td>One Italian embassy page says to book the visa appointment before booking flights or hotels.</td>
+                    <td>Italian embassy page</td>
+                    <td><a href="https://ambdublino.esteri.it/en/?p=213" rel="noopener noreferrer" target="_blank">https://ambdublino.esteri.it/en/?p=213</a></td>
+                    <td>Nov 2026</td>
+                    <td>Ireland</td>
+                    <td>Applies to one embassy only</td>
+                    <td>Medium</td>
+                    <td>Booking order rules vary, so the app must follow the specific embassy.</td>
+                  </tr>
+                  <tr>
+                    <td>EVT8</td>
+                    <td>A Swiss tourist visa guide asks for hotel reservations with proof of payment.</td>
+                    <td>Swiss visa guide (PDF)</td>
+                    <td><a href="https://www.dfae.admin.ch/content/dam/countries/countries-content/australia/en/Visa/Tourist-Visa-AUS_en.pdf" rel="noopener noreferrer" target="_blank">https://www.dfae.admin.ch/content/dam/countries/countries-content/australia/en/Visa/Tourist-Visa-AUS_en.pdf</a></td>
+                    <td>Nov 2026</td>
+                    <td>Australia</td>
+                    <td>Applies to applicants in Australia, other regions may differ</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT9</td>
+                    <td>A common tip is to apply with an itinerary instead of a real booking because cancellations can be costly.</td>
+                    <td>Skyscanner news</td>
+                    <td><a href="https://www.skyscanner.co.in/news/schengen-visa-application-guide" rel="noopener noreferrer" target="_blank">https://www.skyscanner.co.in/news/schengen-visa-application-guide</a></td>
+                    <td>Nov 2026</td>
+                    <td>Not stated</td>
+                    <td>Secondary travel media advice</td>
+                    <td>Low</td>
+                    <td>Not stated</td>
+                  </tr>
+                  <tr>
+                    <td>EVT10</td>
+                    <td>A Spanish embassy page lists minimum Schengen medical cover of 30,000 euros.</td>
+                    <td>Spanish embassy page</td>
+                    <td><a href="https://exteriores.gob.es/Embajadas/seoul/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx" rel="noopener noreferrer" target="_blank">https://exteriores.gob.es/Embajadas/seoul/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx</a></td>
+                    <td>Nov 2026</td>
+                    <td>South Korea</td>
+                    <td>Verify for each case</td>
+                    <td>Medium</td>
+                    <td>Not stated</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <aside class="callout callout--warn">
+              <p>Rules differ by embassy and nationality. Nothing here is visa advice.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="panel" id="questions" data-panel aria-labelledby="h-questions">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">18</span>
+            <h2 class="panel__title" id="h-questions">Open questions</h2>
+            <span class="tag tag--concept">Concept</span>
+          </header>
+          <div class="panel__body">
+            <ul class="bullet-list questions">
+              <li>Why would customers choose this over established travel companies?</li>
+              <li>Is the main problem planning, affordability, personalisation or trust?</li>
+              <li>Can live inventory be accessed at competitive prices?</li>
+              <li>Can suppliers and agencies be secured as partners?</li>
+              <li>Can local companions be verified responsibly?</li>
+              <li>How costly is real emergency assistance?</li>
+              <li>Can the business stay profitable after cancellations and refunds?</li>
+              <li>Which narrow segment and corridor should come first?</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel" id="trace" data-panel aria-labelledby="h-trace">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-2"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">19</span>
+            <h2 class="panel__title" id="h-trace">Traceability</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <div class="trace" data-anim="trace">
+              <div class="trace__cols">
+                <div class="trace__col trace__col--problem">
+                  <h3 class="trace__head">Problem</h3>
+                  <ul class="trace__list">
+                <li class="tn tn--problem" id="tn-P1" data-p="P1" data-reqs="TFR1 TFR2 TFR7" data-metric="M1" tabindex="0">
+                  <span class="tn__id">P1</span>
+                  <span class="tn__text">Planning is fragmented</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P2" data-p="P2" data-reqs="TFR2 TFR7" data-metric="M2" tabindex="0">
+                  <span class="tn__id">P2</span>
+                  <span class="tn__text">Budget is hard to estimate</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P3" data-p="P3" data-reqs="TFR3 TFR4 TFR5 TFR6" data-metric="M3 M4" tabindex="0">
+                  <span class="tn__id">P3</span>
+                  <span class="tn__text">Booking before approval costs money</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P4" data-p="P4" data-reqs="TFR8" data-metric="M5" tabindex="0">
+                  <span class="tn__id">P4</span>
+                  <span class="tn__text">Upfront cost limits travel</span>
+                </li>
+                <li class="tn tn--problem" id="tn-P5" data-p="P5" data-reqs="" data-metric="" tabindex="0">
+                  <span class="tn__id">P5</span>
+                  <span class="tn__text">Trustworthy local help</span>
+                </li>
+                  </ul>
+                </div>
+                <div class="trace__col trace__col--req">
+                  <h3 class="trace__head">Requirement</h3>
+                  <ul class="trace__list">
+                <li class="tn tn--req" id="tn-TFR1" data-key="TFR1">
+                  <span class="tn__id">TFR1</span>
+                  <span class="tn__text">Collect the traveller inputs</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR2" data-key="TFR2">
+                  <span class="tn__id">TFR2</span>
+                  <span class="tn__text">One package, labelled prices</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR3" data-key="TFR3">
+                  <span class="tn__id">TFR3</span>
+                  <span class="tn__text">Visa rules with source and date</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR4" data-key="TFR4">
+                  <span class="tn__id">TFR4</span>
+                  <span class="tn__text">Safer booking order</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR5" data-key="TFR5">
+                  <span class="tn__id">TFR5</span>
+                  <span class="tn__text">Visa tracker from a partner</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR6" data-key="TFR6">
+                  <span class="tn__id">TFR6</span>
+                  <span class="tn__text">Insurance check</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR7" data-key="TFR7">
+                  <span class="tn__id">TFR7</span>
+                  <span class="tn__text">Inclusions and exclusions</span>
+                </li>
+                <li class="tn tn--req" id="tn-TFR8" data-key="TFR8">
+                  <span class="tn__id">TFR8</span>
+                  <span class="tn__text">Payment options, later</span>
+                </li>
+                  </ul>
+                </div>
+                <div class="trace__col trace__col--metric">
+                  <h3 class="trace__head">Metric</h3>
+                  <ul class="trace__list">
+                <li class="tn tn--metric" id="tn-M1" data-key="M1">
+                  <span class="tn__id">M1</span>
+                  <span class="tn__text">Time to plan a trip</span>
+                </li>
+                <li class="tn tn--metric" id="tn-M2" data-key="M2">
+                  <span class="tn__id">M2</span>
+                  <span class="tn__text">Budget accuracy</span>
+                </li>
+                <li class="tn tn--metric" id="tn-M3" data-key="M3">
+                  <span class="tn__id">M3</span>
+                  <span class="tn__text">Refund processing time</span>
+                </li>
+                <li class="tn tn--metric" id="tn-M4" data-key="M4">
+                  <span class="tn__id">M4</span>
+                  <span class="tn__text">Booking completion</span>
+                </li>
+                <li class="tn tn--metric" id="tn-M5" data-key="M5">
+                  <span class="tn__id">M5</span>
+                  <span class="tn__text">Contribution margin per booking</span>
+                </li>
+                  </ul>
+                </div>
+              </div>
+              <svg class="trace__lines" aria-hidden="true" focusable="false"></svg>
+            </div>
+            <p class="trace__note">P5 links to later roadmap items and has no requirement yet. Hover a line to see the items it joins.</p>
+          </div>
+        </section>
+
+        <section class="panel" id="reflection" data-panel aria-labelledby="h-reflection">
+          <span class="panel__edge panel__edge--a" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-3"/></svg></span>
+          <span class="panel__edge panel__edge--b" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#flyer-1"/></svg></span>
+          <header class="panel__head">
+            <span class="panel__num" aria-hidden="true">20</span>
+            <h2 class="panel__title" id="h-reflection">Reflection</h2>
+            <span class="tag tag--draft">Draft</span>
+          </header>
+          <div class="panel__body">
+            <p class="placeholder"><span class="tbc">To be confirmed</span></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <nav class="case-nav" aria-label="Case studies">
+      <a class="case-nav__link" href="index.html#explore"><span class="case-nav__dir">Previous</span><span class="case-nav__title">All explorations</span></a>
+      <a class="case-nav__link case-nav__link--next" href="case-hiring.html"><span class="case-nav__dir">Next</span><span class="case-nav__title">Skills first hiring with feedback</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">Farzeen Hamza &copy; 2026</footer>
+
+  <script src="js/puzzle.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
