@@ -3982,3 +3982,485 @@ a.read-study {
   min-height: 44px;
   padding: 4px 0;
 }
+
+/* ============================================================
+   17. career update: chapter notes, why product, evidence,
+       at a glance, privacy lens, validation plan, wireframes
+   ============================================================ */
+
+/* one line summary under each chapter heading */
+.chapter__note {
+  margin: 12px 0 0;
+  max-width: 48ch;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+}
+
+.chapter__note--deloitte {
+  color: var(--deloitte-green);
+}
+
+.chapter__note + .chapter__body {
+  margin-top: 18px;
+}
+
+/* the two blocks that close the Deloitte chapter */
+.chapter-plain {
+  position: relative;
+  padding: clamp(40px, 8vh, 88px) clamp(16px, 5vw, 64px) clamp(48px, 9vh, 104px);
+  scroll-margin-top: calc(var(--header-h) + 84px);
+}
+
+.chapter-plain__inner {
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(26px, 4vh, 40px);
+}
+
+.why-panel {
+  position: relative;
+  padding: clamp(22px, 3.2vw, 40px);
+  border-radius: 22px;
+  border: 1px solid var(--glass-border);
+  border-left: 2px solid var(--cyan);
+  background:
+    linear-gradient(155deg, rgba(92, 225, 230, 0.10), rgba(255, 255, 255, 0.035) 46%, rgba(8, 12, 22, 0.5));
+  box-shadow: 0 30px 80px rgba(3, 7, 14, 0.5);
+}
+
+.why-panel__title {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1.2;
+  color: var(--ice);
+}
+
+.why-panel p {
+  margin: 0;
+  max-width: 70ch;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #DCE5F5;
+}
+
+.evidence-strip__title {
+  margin: 0 0 16px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.evidence-strip__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ev-card {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: #E4EBF8;
+}
+
+.ev-card__piece {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+.ev-card__piece svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ev-card__piece path {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 7;
+}
+
+/* at a glance box at the top of each case page */
+.glance {
+  position: relative;
+  padding: clamp(18px, 3vh, 34px) clamp(16px, 5vw, 64px) 0;
+}
+
+.glance__inner {
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: clamp(20px, 2.8vw, 30px);
+  border-radius: 22px;
+  border: 1px solid var(--glass-border);
+  background:
+    linear-gradient(150deg, rgba(92, 225, 230, 0.09), rgba(255, 255, 255, 0.035) 55%);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.glance__title {
+  margin: 0 0 16px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.glance__rows {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.glance__row {
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glance__row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.glance__row dt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 3px;
+}
+
+.glance__row dd {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ice);
+}
+
+/* privacy lens inside the data section */
+.lens {
+  margin-top: 26px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(92, 225, 230, 0.34);
+  background: rgba(92, 225, 230, 0.07);
+}
+
+.lens__title {
+  margin: 0 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.lens p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #DCE5F5;
+}
+
+/* validation plan inside the roadmap section */
+.validate {
+  margin-top: 30px;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.validate__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.validate__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  color: var(--ice);
+}
+
+.validate__note {
+  margin: 10px 0 18px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.validate__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.validate__group h4 {
+  margin: 0 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.validate__group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.validate__group li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: #DCE5F5;
+}
+
+.validate__group li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--cyan);
+}
+
+/* reflection draft mark */
+.reflection__mark {
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.reflection__text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #DCE5F5;
+}
+
+/* prototype wireframes */
+.wire-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 22px;
+}
+
+@media (min-width: 1000px) {
+  .wire-grid--pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.wire-grid > * {
+  min-width: 0;
+}
+
+.wire {
+  margin: 0;
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+}
+
+.wire__frame {
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  min-width: 0;
+}
+
+.wire__frame > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wire--wide {
+  max-width: 700px;
+}
+
+.wire__frame--wide {
+  max-width: 700px;
+}
+
+.wire__scroll {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wire__scroll > svg {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: auto;
+}
+
+.wire__cap {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.wire__flag {
+  display: inline-block;
+  margin: 0 8px 4px 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 181, 71, 0.45);
+  background: rgba(255, 181, 71, 0.1);
+  color: var(--amber);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* wireframe drawing primitives */
+.w-frame { fill: rgba(8, 12, 22, 0.55); stroke: rgba(255, 255, 255, 0.16); }
+.w-rule { stroke: rgba(255, 255, 255, 0.1); }
+.w-rule--soft { stroke: rgba(255, 255, 255, 0.07); }
+.w-dot { fill: rgba(255, 255, 255, 0.22); }
+.w-h { font: 600 11.5px var(--font-body); fill: #EAF2FF; }
+.w-h--sm { font-size: 9.6px; }
+.w-h--accent { fill: var(--cyan); }
+.w-l { font-family: var(--font-mono); font-size: 7.6px; letter-spacing: 0.12em; text-transform: uppercase; fill: var(--cyan); }
+.w-l--muted { fill: var(--muted); }
+.w-box { fill: rgba(255, 255, 255, 0.04); stroke: rgba(255, 255, 255, 0.16); }
+.w-box--accent { fill: rgba(92, 225, 230, 0.06); stroke: rgba(92, 225, 230, 0.5); }
+.w-bar { fill: rgba(234, 242, 255, 0.5); }
+.w-bar--dim { fill: rgba(234, 242, 255, 0.2); }
+.w-bar--accent { fill: rgba(92, 225, 230, 0.45); }
+.w-chip { fill: rgba(92, 225, 230, 0.1); stroke: rgba(92, 225, 230, 0.45); }
+.w-chip--amber { fill: rgba(255, 181, 71, 0.12); stroke: rgba(255, 181, 71, 0.5); }
+.w-ct { font-family: var(--font-body); font-size: 8.2px; fill: #EAF2FF; }
+.w-ct--muted { fill: var(--muted); }
+.w-ct--amber { fill: var(--amber); }
+.w-btn { fill: rgba(255, 255, 255, 0.05); stroke: rgba(255, 255, 255, 0.22); }
+.w-btn--go { fill: rgba(92, 225, 230, 0.85); stroke: rgba(92, 225, 230, 0.9); }
+.w-bt { font-family: var(--font-body); font-size: 8.4px; font-weight: 600; fill: #EAF2FF; }
+.w-bt--go { fill: #06141a; }
+.w-link { font-family: var(--font-body); font-size: 9.8px; font-weight: 600; fill: var(--cyan); text-decoration: underline; }
+.w-node { fill: rgba(8, 12, 22, 0.9); stroke: rgba(255, 255, 255, 0.3); }
+.w-node--done { fill: rgba(92, 225, 230, 0.85); stroke: rgba(92, 225, 230, 1); }
+.w-node--locked { fill: rgba(255, 181, 71, 0.18); stroke: rgba(255, 181, 71, 0.75); }
+.w-num { font-family: var(--font-mono); font-size: 7.4px; letter-spacing: 0.1em; fill: var(--muted); }
+.w-step { font-family: var(--font-body); font-size: 9px; font-weight: 600; fill: #EAF2FF; }
+.w-phase { font-family: var(--font-mono); font-size: 7.2px; letter-spacing: 0.14em; text-transform: uppercase; fill: var(--muted); }
+.w-phase--go { fill: var(--cyan); }
+.w-arrow { fill: none; stroke: rgba(92, 225, 230, 0.7); stroke-width: 1.3; }
+.w-lock__body { fill: rgba(255, 181, 71, 0.16); stroke: rgba(255, 181, 71, 0.8); }
+.w-lock__shackle { fill: none; stroke: rgba(255, 181, 71, 0.8); stroke-width: 1.4; }
+.w-locklabel { font-family: var(--font-mono); font-size: 7.2px; letter-spacing: 0.1em; text-transform: uppercase; fill: var(--amber); }
+.w-check { fill: none; stroke: var(--aurora); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.w-cross { fill: none; stroke: rgba(255, 255, 255, 0.32); stroke-width: 1.5; stroke-linecap: round; }
+
+/* draw and fade the wireframes when the panel arrives */
+.wire svg .w-g {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.panel.is-in .wire svg .w-g {
+  opacity: 1;
+  transform: none;
+}
+
+.w-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 1.2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.9s var(--ease) 0.15s;
+}
+
+.w-line--go {
+  stroke: rgba(92, 225, 230, 0.7);
+}
+
+.panel.is-in .w-line {
+  stroke-dashoffset: 0;
+}
+
+html:not(.js) .wire svg .w-g,
+html:not(.js) .w-line {
+  opacity: 1;
+  transform: none;
+  stroke-dashoffset: 0;
+}
+
+@media (max-width: 900px) {
+  .evidence-strip__list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 620px) {
+  .glance__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .validate {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wire svg .w-g {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .w-line {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+}

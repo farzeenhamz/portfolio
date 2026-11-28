@@ -22,7 +22,7 @@ js/main.js          starfield, dragon, scroll progress, transitions, PRD behavio
 README.md           this file
 ```
 
-Total weight is about 352 KB of HTML, CSS and JavaScript. Fonts are the only
+Total weight is about 380 KB of HTML, CSS and JavaScript. Fonts are the only
 external request (Google Fonts: Space Grotesk, Inter, JetBrains Mono). If the
 fonts do not load, the system fallbacks take over and nothing breaks.
 
@@ -39,6 +39,14 @@ fonts do not load, the system fallbacks take over and nothing breaks.
 | 6 Break | `quiet` | calm interlude, CIPP/E |
 | 7 Explorations | `explore` | the two case cards |
 | 8 Contact | `contact` | email, mobile, WhatsApp, location and LinkedIn |
+
+Every chapter heading also carries a one line summary in
+`<p class="chapter__note">`. It sits between the `<h2>` and the body copy, so it
+is the first thing a reader takes from the chapter.
+
+After the Deloitte chapter the page pauses on two plain blocks: `#why-product`,
+which explains the move into product work, and a strip of three evidence lines
+from that role. Edit both directly in `index.html`.
 
 The dragon's body segments are real jigsaw pieces produced by
 `Puzzle.piece()`. As chapters pass, the segment on screen is regenerated with a
@@ -75,15 +83,20 @@ Each page is a set of panels, one per section, in a fixed order:
 9. User stories with acceptance criteria
 10. Edge cases and exceptions
 11. AI requirements and human oversight
-12. Data, privacy and compliance
+12. Data, privacy and compliance (ends with the privacy lens box)
 13. Success metrics
-14. Risks
-15. MVP and roadmap
-16. Competitors
-17. Evidence log
-18. Open questions
-19. Traceability
-20. Reflection
+14. Prototype and flow (two concept wireframes)
+15. Risks
+16. MVP and roadmap (ends with the validation plan box)
+17. Competitors
+18. Evidence log
+19. Open questions
+20. Traceability
+21. Reflection
+
+Above the rail there is an `At a glance` box with five rows: problem, who it is
+for, first slice, status and next step. It is a plain `<dl>`, outside the panel
+system, so it does not need a number.
 
 Each panel looks like this:
 
@@ -126,9 +139,10 @@ Search the HTML for these and replace them:
 
 | Find | Where | What to do |
 | --- | --- | --- |
-| `To be confirmed` | requirement cards, user stories, competitor leads, Reflection | search for `class="tbc"` and write the real content. Delete the `tbc` span and leave plain text when you do |
 | Revision history rows | both case pages, under the title | add a row per revision and move the badges from `PRD v0.1 draft` to `v0.2` |
 | `None yet` | evidence log on the hiring page | replace with rows once sources exist |
+| `legal requirements to be confirmed` | hiring page, HFR8 evidence | replace with the finding once a lawyer or the official text settles it |
+| Validation plan answers | both roadmaps | the plan lists the questions. When interviews happen, the answers belong in the problem panel, not in the plan |
 
 Keep the rule the pages are built on: do not add testimonials, metrics,
 percentages, awards, users, results or dates that cannot be shown. If a claim is
@@ -213,9 +227,16 @@ root. There is no server code and nothing to build.
   tested with real users, recruiters or travellers.
 * The hiring evidence log is empty and the travel evidence log is a quick scan.
   Both are drafts and say so.
-* Where a requirement, story or competitor has no content yet, the page says
-  `To be confirmed` instead of inventing something. There are 38 of those on the
-  hiring page and 62 on the travel page.
+* Every requirement card, user story and reflection now carries written text.
+  Nothing claims a result, a user count or a test outcome, because none exist.
+* The two wireframe sets in Prototype and flow are drawings, labelled
+  `Concept wireframe, not tested`. They show the intended flow, not a built
+  prototype.
+* The travel competitor table lists only the services that were checked. Eleven
+  earlier rows that were marked `Lead, not yet checked` were removed rather than
+  left empty.
+* The validation plans are plans. No interview has been run, so the site shows
+  the questions and says plainly that there are no findings yet.
 * The contact chapter now carries a mobile number, a WhatsApp number and a
   country, because the owner asked for them. Publishing the site publishes those
   details.
